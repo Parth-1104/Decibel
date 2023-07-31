@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Handjet:wght@300&display=swap');
+body{
+    background-color: antiquewhite;
+}
+*{
+    margin:0;
+    padding:0;
+}
+nav{
+     font-family: 'Borel', cursive;
+    font-family: 'Handjet', cursive;;
+    
+}
+nav ul{
+    display:flex;
+    align-items: centre ;
+    list-style-type: none;
+    height:65px;
+    background-color: black;
+    color:white;
+
+}
+nav ul li{
+    padding: 0 15px
+}
+.brand img{
+    width:84px;
+    padding: 0 18px
+
+}
+.brand{
+    display:flex;
+    align-items: centre;
+    font-weight: 1.5rem; 
+}
+.bottom{
+    position:sticky;
+    height:80px;
+    background-color: palevioletred;
+bottom:0;
+display:flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.container{
+    min-height: 75vh;
+}
+#myprogressbar{
+    width:80vw;
+    text-align: center;
+
+}
