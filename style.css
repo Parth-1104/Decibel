@@ -136,7 +136,7 @@ border-radius: 100%;;
     .timestamp i{
         cursor: pointer;
     }
-    .nameop{
+    .songName{
         font-size: 30px;
     }
     .songinfo{font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -148,5 +148,30 @@ border-radius: 100%;;
         opacity: 0;
         transition: opacity 0.8s ease-in;
     }
-   
+   .dark-mode{
+    background-color:black; 
+    color: rgb(188, 159, 123);
+   }
+   button{
     
+    cursor: pointer;
+   }
+   .boxy{
+    position:absolute;
+   
+    right: 10%;
+    top: 130px;
+    padding: 0px;
+    background-color: black;
+    color: black;
+    border-radius: 100px;
+   }
+   .boxy img{
+    width: 37px;
+    height: 37px;
+    ;
+ 
+   border-radius: 100%;;
+
+   }
+     

@@ -1,20 +1,31 @@
 console.log("welcome to Decibel");
 let songIndex=0;
-let audio =new Audio('1.mp3');
+let audio =new Audio('songs/1.mp3');
 let masterPlay=document.getElementById('masterPlay');
 let myProgressBar=document.getElementById('myProgressBar');
 let gif=document.getElementById('gif');
+let songItem=Array.from(document.getElementsByClassName('songItem'));
 
 let songs= [
     
-       {songName:"Cheque",filePath:"song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath: "song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath: "song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath: "song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath:"song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath:"song/1.mp3",coverPath:"shubh.jpg"},
-       {songName:"Cheque",filePath:"song/1.mp3", coverPath:"shubh.jpg"},
-                    {songName:"Cheque",filePath:"song/1.mp3",coverPath:"shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},
+       
+       /*{songName:"Parda",filePath:"songs/k18.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"yadav brand",filePath: "songs/system.mp3",coverPath:"covers/ranveer.jpg"},
+       {songName:"sang rahiyo",filePath: "songs/ranveer.mp3",coverPath:"covers/ranveer.jpg"},
+       {songName:"desi balak",filePath: "songs/desi.mp3",coverPath:"covers/ranveer.jpg"},
+       {songName:"ajnabee",filePath:"songs/ajnabee.mp3",coverPath:"covers/ranveer.jpg"},
+       {songName:"heer ranjha",filePath:"songs/heer.mp3",coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3", coverPath:"covers/shubh.jpg"},
+       {songName:"Cheque",filePath:"songs/1.mp3",coverPath:"covers/shubh.jpg"},*/
 ]
                    masterPlay.addEventListener('click', ()=> {
                         if(audio.paused||audio.currentTime<=0){
@@ -57,4 +68,13 @@ myProgressBar.addEventListener('change',()=>{
         }
         masterPlay.addEventListener("click",playMusic);
         */
-        
+    songItem.forEach((element,i)=>{
+        console.log(element,i)
+        element.getElementsByTagName("img")[0].src=songs[i].coverPath;
+        element.getElementsByclassName("songName")[0].innerText=songs[i].songName;
+
+    }    )
+    function myfunction(){
+        let element=document.body;
+        element.classList.toggle("dark-mode");
+    }
